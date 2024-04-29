@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Currículum Vitae (Versión Móvil)</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> <!-- Biblioteca jsPDF -->
+    <title>Mi Currículum Vitae (Móvil)</title>
     <style>
         body {
             font-family: 'Press Start 2P', cursive;
@@ -15,76 +14,33 @@
         }
 
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #333;
+            max-width: 100%;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-            position: relative;
-            overflow: hidden;
-        }
-
-        header {
-            background-color: #1a1a1a;
-            text-align: center;
-            padding: 10px 0; /* Ajustado el padding vertical */
-            margin-top: -20px;
-            border-radius: 8px 8px 0 0;
-            position: relative;
-            z-index: 1;
         }
 
         header h1 {
-            margin-bottom: 10px; /* Ajustado el margen inferior */
-            font-size: 32px; /* Reducido el tamaño de la fuente */
-            text-transform: uppercase;
-        }
-
-        header::before,
-        header::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -50%;
-            width: 200%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        header::before {
-            background: linear-gradient(to right, rgba(0, 123, 255, 0), rgba(0, 123, 255, 0.5));
-        }
-
-        header::after {
-            background: linear-gradient(to right, rgba(0, 123, 255, 0.5), rgba(0, 123, 255, 0));
-        }
-
-        h1, h2, h3 {
-            color: #fff;
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        .section h2 {
-            margin-bottom: 10px;
             font-size: 24px;
-            color: #ffffff;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         .info p {
-            margin: 5px 0;
+            margin: 10px 0;
+        }
+
+        .avatar {
+            width: 100%;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .section {
+            margin-bottom: 20px;
         }
 
         .controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #1a1a1a;
-            padding: 20px 0;
-            border-radius: 8px;
+            text-align: center;
             margin-top: 20px;
         }
 
@@ -95,33 +51,23 @@
             border: 2px solid #007bff;
             border-radius: 5px;
             transition: all 0.3s ease;
-            font-size: 20px;
-            margin: 0 20px; /* Espacio entre los botones */
+            font-size: 16px;
+            margin: 0 10px;
         }
 
         .controls a:hover {
             background-color: #007bff;
             color: #ffffff;
         }
-
-        .avatar {
-            width: 175px; /* Tamaño de la imagen */
-            height: 200px; /* Tamaño de la imagen */
-            border-radius: 50%; /* Para hacerla redonda */
-            position: absolute; /* Posición absoluta para moverla */
-            top: 120px; /* Ajusta la posición vertical */
-            left: 50%; /* Centra horizontalmente */
-            transform: translateX(-50%); /* Centra horizontalmente */
-            border: 3px solid #fff; /* Añade un borde blanco */
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="assets/javi.png" alt="Avatar" class="avatar">
         <header>
-            <h1>Mi Currículum Vitae (Versión Móvil)</h1>
+            <h1>Mi Currículum Vitae (Móvil)</h1>
         </header>
+
+        <img src="assets/javi.png" alt="Avatar" class="avatar">
 
         <section class="section">
             <h2>Información Personal:</h2>
@@ -139,7 +85,7 @@
                 <p><strong>Puesto:</strong> Desarrollador Web junior</p>
                 <p><strong>Periodo:</strong> Enero 2022 - Presente</p>
                 <p><strong>Experiencia:</strong> Desarrollo de aplicaciones web utilizando tecnologías modernas. </p>
-                <p><strong></strong> Creacion de diversidad de proyectos a travez de la plataforma github </p>
+                <p><strong></strong> Creación de diversidad de proyectos a través de la plataforma GitHub </p>
             </div>
         </section>
 
