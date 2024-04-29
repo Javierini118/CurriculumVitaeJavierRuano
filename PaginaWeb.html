@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Currículum Vitae</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> <!-- Biblioteca jsPDF -->
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 10px 0; /* Ajustado el padding vertical */
+            margin-top: -20px;
+            border-radius: 8px 8px 0 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            margin-bottom: 10px; /* Ajustado el margen inferior */
+            font-size: 32px; /* Reducido el tamaño de la fuente */
+            text-transform: uppercase;
+        }
+
+        header::before,
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        header::before {
+            background: linear-gradient(to right, rgba(0, 123, 255, 0), rgba(0, 123, 255, 0.5));
+        }
+
+        header::after {
+            background: linear-gradient(to right, rgba(0, 123, 255, 0.5), rgba(0, 123, 255, 0));
+        }
+
+        h1, h2, h3 {
+            color: #fff;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        .info p {
+            margin: 5px 0;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+            padding: 20px 0;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .controls a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            margin: 0 20px; /* Espacio entre los botones */
+        }
+
+        .controls a:hover {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .avatar {
+            width: 175px; /* Tamaño de la imagen */
+            height: 200px; /* Tamaño de la imagen */
+            border-radius: 50%; /* Para hacerla redonda */
+            position: absolute; /* Posición absoluta para moverla */
+            top: 120px; /* Ajusta la posición vertical */
+            left: 50%; /* Centrar la imagen horizontalmente */
+            transform: translateX(-50%); /* Centrar la imagen horizontalmente */
+            border: 3px solid #fff; /* Añade un borde blanco */
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100%;
+                border-radius: 0; /* Eliminar el borde redondeado en pantallas pequeñas */
+            }
+
+            header h1 {
+                font-size: 24px; /* Reducir el tamaño del encabezado en pantallas pequeñas */
+            }
+
+            .avatar {
+                width: 120px; /* Reducir el tamaño de la imagen en pantallas pequeñas */
+                height: 140px; /* Reducir el tamaño de la imagen en pantallas pequeñas */
+                top: 80px; /* Ajustar la posición de la imagen en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/javi.png" alt="Avatar" class="avatar">
+        <header>
+            <h1>Mi Currículum Vitae</h1>
+        </header>
+
+        <section class="section">
+            <h2>Información Personal:</h2>
+            <div class="info">
+                <p><strong>Nombre:</strong> Javier Orlando Ruano Arana </p>
+                <p><strong>Correo Electrónico:</strong> joruanoa@correo.url.edu.gt</p>
+                <p><strong>Dirección:</strong> Ciudad de Guatemala, Guatemala</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Experiencia Laboral:</h2>
+            <div class="info">
+                <p><strong>Nombre del Empleador:</strong> Universidad rafael landivar</p>
+                <p><strong>Puesto:</strong> Desarrollador Web junior</p>
+                <p><strong>Periodo:</strong> Enero 2022 - Presente</p>
+                <p><strong>Experiencia:</strong> Desarrollo de aplicaciones web utilizando tecnologías modernas. </p>
+                <p><strong></strong> Creacion de diversidad de proyectos a travez de la plataforma github </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Educación:</h2>
+            <div class="info">
+                <p><strong>Grado:</strong> Licenciatura en Informática y sistemas segundo año</p>
+                <p><strong>Institución:</strong> Universidad rafael landívar -URL-</p>
+                <p><strong>Periodo:</strong> 2022 - 2024</p>
+            </div>
+        </section>
+    
+        <div class="controls">
+            <a href="https://drive.google.com/file/d/1rox4XwxGoUcN4ddq0Wmqv73dXn6y-V2A/view?usp=sharing" target="_blank">Descargar Currículum</a>
+            <a href="https://github.com/Javierini118" target="_blank">Contactar GitHub</a>
+            <a href="https://linktr.ee/javierini118" target="_blank">Redes sociales</a>
+        </div>
+    </div>
+</body>
+</html>
